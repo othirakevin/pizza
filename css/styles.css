@@ -14,3 +14,15 @@ h1 {
   background-color: black;
 }
 
+.content {
+  display: none;
+  overflow: hidden;
+}
+
+.collapsible {
+  cursor: pointer;
+}
+
+.active, .collapsible: :hover {
+  background-color: grey;
+}
