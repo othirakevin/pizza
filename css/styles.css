@@ -1,4 +1,16 @@
 body {
   background-image: url(../images/pizza3.jpg);
   background-size: 100% ;
+  padding: 5%;
+  
 }
+
+h1 {
+  font-family: cursive;
+  color: aliceblue;
+  text-align: center;
+  font-size: 500;
+  font-weight: 900;
+  background-color: black;
+}
+
