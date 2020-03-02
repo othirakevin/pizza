@@ -24,16 +24,11 @@
 
   <h2> Our pizza selections come in three categories:</h2>
   <p>
-    Size; <br>
-      <button type="button" class="collapsible">Small</button>
-    <div class="content">
-      <p>A small pizza can feed one adult and one child. <br>
-         Price: kshs: 500</p>
-    </div>
+    Size; 
+    <li>Small</li>
     <li>Medium</li>
     <li>Large</li>
     <br>
-
     Toppins;
     <li>Pepperoni</li>
     <li>Mushrooms</li>
@@ -82,7 +77,7 @@
        </select>  	
         </td>
       </tr>
-    <!-- collects the order information from the user -->
+    
       </tr>
     <th>Pizza Crust</th>
       <tr>
@@ -97,7 +92,7 @@
        <p>The total cost is: Kshs<input id="cost" type="text" disabled/></p>
        <p>For delivery, please avail the following details:</p>
 
-       <th>First name</th>
+    <th>First name</th>
     <th>Last name</th>
       <tr>
         <td class="spacing"><input type="text" name="firstname"></td>
@@ -111,6 +106,8 @@
         <td class="spacing"><input type="text" name="phone"></td>
         <td class="spacing"><input type="text" name="address"></td> 
       </tr>  
+
+      
       <a href="Submit.html" class="pure-button pure-button-primary">Submit</a>
         </td>
       </tr>
@@ -125,186 +122,15 @@
         </div>
            
           </div>
-      <script type="text/javascript">
-     $(".sum").change(function() { //execute everytime something is changed i.e pizza added/removed
-        var total = 0; // set inital total at 0
-        $.each($(".sum"), function() { //for each item with class "sum";
-            total += parseFloat($(this).val()); // Parse the string and return the sum as a float
-        });
-        $("#cost").val(total) //Print the sum to input id "cost"
-    });
-     </script>
-     <!-- Script links to the styles.css file to make a higher density background image -->
-    </body>
-    </html>
-    <?php
-    //comment needed
-    body:{
-      allign: center;
-      }
-      if (isset($_POST['email']))  {
-      
-      //comment needed
-      $admin_email = "1dhawinkels@tawacollege.school.nz";
-      $email = $_POST['email'];
-      $subject = $_POST['Daniel Hawinkels Pizza Hut form'];
-      $comment = $_POST['This is the results'];
-      $body = "First name: ".$Firstname/n;
-      $body  .= "Last name: ".$Lastname/n;
-      $body  .= "Address: ".$Address/n;
-      $body  .= "Phone number: ".$Phonenumber/n;
-      $body  .= "Pizza 1: ".$Pizza1/n;
-      $body  .= "Pizza 2: ".$Pizza2/n;
-      $body  .= "Pizza 3: ".$Pizza3;
-      
-      //comment needed
-      mail($admin_email, "$subject", $body,$email);
-      
-      //comment needed
-      echo "Thank you for contacting us!";
-      }
-      
-      //comment needed
-      else  {
-              <form method="post">
-              Email: <input name="email" type="text" /><br />
-              Subject: <input name="subject" type="text" /><br />
-              Extra: <input name="extra" type="text" /><br />
-              Message:<br />
-              <textarea name="comment" rows="15" cols="40"></textarea><br />
-              <input type="submit" value="Submit" />
-              </form>
-     }
-    ?>
-  <!-- pizza type -->
-  <h2>Pizza type</h2>
-  <div>
-    <input id="pizza-margarita" name="pizza-type" type="radio" value="margarita">
-    <label for="pizza-margarita"><strong>Margarita</strong> (fresh mozzarella and basil with sauce)</label>
-  </div>
-  <div>
-    <input id="pizza-mushroom" name="pizza-type" type="radio" value="mushroom">
-    <label for="pizza-mushroom"><strong>Mondo Mushroom</strong> (all the mushrooms you can handle)</label>
-  </div>
-  <div>
-    <input id="pizza-sausage" name="pizza-type" type="radio" value="sausage">
-    <label for="pizza-sausage"><strong>Classic sausage</strong> (Italian sausage and peppers)</label>
-  </div>
-  <div>
-    <input id="pizza-veggie" name="pizza-type" type="radio" value="veggie">
-    <label for="pizza-veggie"><strong>Vegetables!</strong> (seasonal veggie medley)</label>
-  </div>
-  <div>
-    <input id="type-custom" name="pizza-type" type="radio" value="custom" checked>
-    <label for="type-custom"><strong>Custom</strong> (design your own!)</label>
-  </div>
-
-  <h2>Toppings</h2>
-
-  <!-- toppings -->
-  <div>
-    <input id="topping-cheese" name="cheese" type="checkbox" value="cheese" checked>
-    <label for="topping-cheese"><strong>Cheese</strong></label>
-
-    <label class="visuallyhidden" for="topping-cheese-location">Cheese location</label>
-    <select id="topping-cheese-location" name="cheese-location">
-      <option value="all" selected>All over</option>
-      <option value="left">Left side</option>
-      <option value="right">Right side</option>
-  </select>
-  </div>
-  <div>
-    <input id="topping-pepperoni" name="topping" type="checkbox" value="pepperoni">
-    <label for="topping-pepperoni"><strong>Pepperoni</strong></label>
-    <!-- for a cleaner experience, we'd only add the <select> when the checkbox is checked -->
-  </div>
-  <div>
-    <input id="topping-beef" name="topping" type="checkbox" value="beef" checked>
-    <label for="topping-beef"><strong>Ground beef</strong></label>
-
-    <label class="visuallyhidden" for="topping-beef-location">Beef location</label>
-    <select id="topping-beef-location" name="beef-location">
-      <option value="all">All over</option>
-      <option value="left" selected>Left side</option>
-      <option value="right">Right side</option>
-    </select>
-  </div>
-  <div>
-    <input id="topping-spinach" name="topping" type="checkbox" value="spinach" checked>
-    <label for="topping-spinach"><strong>Fresh spinach</strong></label>
-    <label class="visuallyhidden" for="topping-spinach-location">Spinach location</label>
-    <select id="topping-spinach-location" name="spinach-location">
-      <option value="all">All over</option>
-      <option value="left">Left side</option>
-      <option value="right" selected>Right side</option>
-    </select>
-  </div>
-  <div>
-    <input id="topping-peppers" name="topping" type="checkbox" value="peppers">
-    <label for="topping-peppers"><strong>Grilled peppers</strong></label>
-    <!-- for a cleaner experience, we'd only add the <select> when the checkbox is checked -->
-  </div>
-
-  <h2>Important details</h2>
-  <!-- size -->
-  <div>
-    <label for="pizza-size"><strong>Size</strong></label>
-    <select id="pizza-size" name="pizza-size">
-      <option value="s">Small</option>
-      <option value="m">Medium</option>
-      <option value="l" selected>Large</option>
-      <option value="xl">Extra large</option>
-    </select>
-  </div>
-  <div>
-
-  <div>
-    <label for="pizza-qty"><strong>Quantity</strong></label>
-    <select id="pizza-qty" name="pizza-qty">
-      <option value="1" selected>1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-    </select>
-  </div>
-  <div>
     
-  <div class="textarea">
-    <label for="notes"><strong>Notes</strong></label>
-    <textarea id="notes"></textarea>
-  </div>
+  
+  <form method="post">
+    Email: <input name="email" type="text" /><br />
+    Subject: <input name="subject" type="text" /><br />
+    Extra: <input name="extra" type="text" /><br />
+    Message:<br />
+    <textarea name="comment" rows="15" cols="40"></textarea><br />
+    <input type="submit" value="Submit" />
+  </form>
 
-    <a href="#add-another"><span aria-hidden="true">+</span> Add another pizza</a>
-
-  <a href="payment.html" class="button">Head to payment</a>
-</form>
-
-<link rel="stylesheet" href="js/script.js">
-</body>
-</html>
-
-
-<!--Daniel Hawinkels-->
-<!--index.html-->
-
-<!DOCTYPE HTML>
-
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pizza Hut Form</title>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.0.2.js"></script>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-	<!-- links the background to the defined stylesheet -->
-</head>
-<body>
-<div class="center">
-
-<!-- heading instructions for the user -->
-      
-</div>
-<!-- divider tellong the user how to use the online form -->
+ 
