@@ -1,6 +1,7 @@
 body {
   background-image: url(../images/pizza3.jpg);
-  background-size: 100% ls;
+  background-size: 100% ;
+  background-attachment: fixed;
   padding: 5%;
   background-repeat: no-repeat;
   

@@ -38,9 +38,9 @@ body:{
   $body  .= "Last name: ".$Lastname/n;
   $body  .= "Address: ".$Address/n;
   $body  .= "Phone number: ".$Phonenumber/n;
-  $body  .= "Pizza 1: ".$Pizza1/n;
-  $body  .= "Pizza 2: ".$Pizza2/n;
-  $body  .= "Pizza 3: ".$Pizza3;
+  $body  .= "Pizza Size: ".$Pizza1/n;
+  $body  .= "Pizza Toppings: ".$Pizza2/n;
+  $body  .= "Pizza Crust: ".$Pizza3;
   
   //comment needed
   mail($admin_email, "$subject", $body,$email);
