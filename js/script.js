@@ -29,7 +29,7 @@ body:{
 	}
   if (isset($_POST['email']))  {
   
-  //comment needed
+ 
   $admin_email = "1dhawinkels@tawacollege.school.nz";
   $email = $_POST['email'];
   $subject = $_POST['Daniel Hawinkels Pizza Hut form'];
@@ -42,10 +42,9 @@ body:{
   $body  .= "Pizza Toppings: ".$Pizza2/n;
   $body  .= "Pizza Crust: ".$Pizza3;
   
-  //comment needed
+ d
   mail($admin_email, "$subject", $body,$email);
   
-  //comment needed
   echo "Thank you for contacting us!";
   }
   
