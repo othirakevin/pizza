@@ -49,6 +49,129 @@
 
   <h1>Order form</h1>
 <form>
+
+  <div class="center">
+    <p class="spacing"> Please enter your details. Note that you can only order up to 6 pizzas online. </p>
+    <p class="spacing">If you wish to order less than 3 pizzas then leave the space blank. </p>
+    
+    </div>
+    <!-- Divider for the products being ordered -->
+    <div class="center">
+    <table>
+    <th>First name</th>
+    <th>Last name</th>
+      <tr>
+        <td class="spacing"><input type="text" name="firstname"></td>
+        <td class="spacing"><input type="text" name="lastname"></td> 
+      </tr>
+    <br>
+    <!-- Variables collecting the user's first and last names -->
+    <th>Phone Number</th>
+    <th>Address</th>
+      <tr>
+        <td class="spacing"><input type="text" name="phone"></td>
+        <td class="spacing"><input type="text" name="address"></td> 
+      </tr>  
+    <th>Pizza Size</th>
+    <th>Pizza Toppings</th>
+      <tr>
+        <td class="spacing">
+        <select name="pizza1" class="sum">
+        <option value="0">Please select</option>
+        <option value="5.00">Small Kshs-500.00</option>
+        <option value="6.00">Medium Kshs-800.00</option>
+        <option value="4.50">Large Kshs-1000.50</option>
+        
+        </select>    
+        </td>
+        <td class="spacing">
+        <select name="pizza2" class="sum">
+        <option value="0">Please select</option>
+        <option value="5.00">Pepperoni - $5.00</option>
+        <option value="6.00">Meatlovers - $6.00</option>
+        <option value="4.50">Pure Cheese - $4.50</option>
+        <option value="8.50">Supreme - $8.50</option>
+       </select>  	
+        </td>
+      </tr>
+    <!-- collects the order information from the user -->
+      </tr>
+    <th>Pizza Crust</th>
+      <tr>
+        <td class="spacing">
+       <select name="pizza3" class="sum">
+        <option value="0">Please select</option>
+        <option value="5.00">Pepperoni - $5.00</option>
+        <option value="6.00">Meatlovers - $6.00</option>
+        <option value="4.50">Pure Cheese - $4.50</option>
+        <option value="8.50">Supreme - $8.50</option>
+       </select>
+       <p>The total cost is: $<input id="cost" type="text" disabled/></p>
+      <a href="Submit.html" class="pure-button pure-button-primary">Submit</a>
+        </td>
+      </tr>
+     </div>
+     
+    </table>
+     <div class="row">
+        <a href="contact.html" class="pure-button pure-button-primary">Contact Us</a>
+        <!--
+        links to the Pizza hut site. I will make it so that the user can see their order in the future
+        -->
+        </div>
+           
+          </div>
+      <script type="text/javascript">
+     $(".sum").change(function() { //execute everytime something is changed i.e pizza added/removed
+        var total = 0; // set inital total at 0
+        $.each($(".sum"), function() { //for each item with class "sum";
+            total += parseFloat($(this).val()); // Parse the string and return the sum as a float
+        });
+        $("#cost").val(total) //Print the sum to input id "cost"
+    });
+     </script>
+     <!-- Script links to the styles.css file to make a higher density background image -->
+    </body>
+    </html>
+    <?php
+    //comment needed
+    body:{
+      allign: center;
+      }
+      if (isset($_POST['email']))  {
+      
+      //comment needed
+      $admin_email = "1dhawinkels@tawacollege.school.nz";
+      $email = $_POST['email'];
+      $subject = $_POST['Daniel Hawinkels Pizza Hut form'];
+      $comment = $_POST['This is the results'];
+      $body = "First name: ".$Firstname/n;
+      $body  .= "Last name: ".$Lastname/n;
+      $body  .= "Address: ".$Address/n;
+      $body  .= "Phone number: ".$Phonenumber/n;
+      $body  .= "Pizza 1: ".$Pizza1/n;
+      $body  .= "Pizza 2: ".$Pizza2/n;
+      $body  .= "Pizza 3: ".$Pizza3;
+      
+      //comment needed
+      mail($admin_email, "$subject", $body,$email);
+      
+      //comment needed
+      echo "Thank you for contacting us!";
+      }
+      
+      //comment needed
+      else  {
+              <form method="post">
+              Email: <input name="email" type="text" /><br />
+              Subject: <input name="subject" type="text" /><br />
+              Extra: <input name="extra" type="text" /><br />
+              Message:<br />
+              <textarea name="comment" rows="15" cols="40"></textarea><br />
+              <input type="submit" value="Submit" />
+              </form>
+     }
+    ?>
   <!-- pizza type -->
   <h2>Pizza type</h2>
   <div>
@@ -181,125 +304,3 @@
       
 </div>
 <!-- divider tellong the user how to use the online form -->
-<div class="center">
-<p class="spacing"> Please enter your details. Note that you can only order up to 6 pizzas online. </p>
-<p class="spacing">If you wish to order less than 3 pizzas then leave the space blank. </p>
-
-</div>
-<!-- Divider for the products being ordered -->
-<div class="center">
-<table>
-<th>First name</th>
-<th>Last name</th>
-  <tr>
-    <td class="spacing"><input type="text" name="firstname"></td>
-    <td class="spacing"><input type="text" name="lastname"></td> 
-  </tr>
-<br>
-<!-- Variables collecting the user's first and last names -->
-<th>Phone Number</th>
-<th>Address</th>
-  <tr>
-    <td class="spacing"><input type="text" name="phone"></td>
-    <td class="spacing"><input type="text" name="address"></td> 
-  </tr>  
-<th>Pizza 1</th>
-<th>Pizza 2</th>
-  <tr>
-    <td class="spacing">
-    <select name="pizza1" class="sum">
-    <option value="0">Please select</option>
-    <option value="5.00">Pepperoni - $5.00</option>
-    <option value="6.00">Meatlovers - $6.00</option>
-    <option value="4.50">Pure Cheese - $4.50</option>
-    <option value="8.50">Supreme - $8.50</option>
-    </select>    
-    </td>
-    <td class="spacing">
-    <select name="pizza2" class="sum">
-    <option value="0">Please select</option>
-    <option value="5.00">Pepperoni - $5.00</option>
-    <option value="6.00">Meatlovers - $6.00</option>
-    <option value="4.50">Pure Cheese - $4.50</option>
-    <option value="8.50">Supreme - $8.50</option>
-   </select>  	
-    </td>
-  </tr>
-<!-- collects the order information from the user -->
-  </tr>
-<th>Pizza 3</th>
-  <tr>
-    <td class="spacing">
-   <select name="pizza3" class="sum">
-    <option value="0">Please select</option>
-    <option value="5.00">Pepperoni - $5.00</option>
-    <option value="6.00">Meatlovers - $6.00</option>
-    <option value="4.50">Pure Cheese - $4.50</option>
-    <option value="8.50">Supreme - $8.50</option>
-   </select>
-   <p>The total cost is: $<input id="cost" type="text" disabled/></p>
-  <a href="Submit.html" class="pure-button pure-button-primary">Submit</a>
-    </td>
-  </tr>
- </div>
- 
-</table>
- <div class="row">
-		<a href="contact.html" class="pure-button pure-button-primary">Contact Us</a>
-		<!--
-		links to the Pizza hut site. I will make it so that the user can see their order in the future
-		-->
-		</div>
-       
-      </div>
-	<script type="text/javascript">
- $(".sum").change(function() { //execute everytime something is changed i.e pizza added/removed
-    var total = 0; // set inital total at 0
-    $.each($(".sum"), function() { //for each item with class "sum";
-        total += parseFloat($(this).val()); // Parse the string and return the sum as a float
-    });
-    $("#cost").val(total) //Print the sum to input id "cost"
-});
- </script>
- <!-- Script links to the styles.css file to make a higher density background image -->
-</body>
-</html>
-<?php
-//comment needed
-body:{
-	allign: center;
-	}
-  if (isset($_POST['email']))  {
-  
-  //comment needed
-  $admin_email = "1dhawinkels@tawacollege.school.nz";
-  $email = $_POST['email'];
-  $subject = $_POST['Daniel Hawinkels Pizza Hut form'];
-  $comment = $_POST['This is the results'];
-  $body = "First name: ".$Firstname/n;
-  $body  .= "Last name: ".$Lastname/n;
-  $body  .= "Address: ".$Address/n;
-  $body  .= "Phone number: ".$Phonenumber/n;
-  $body  .= "Pizza 1: ".$Pizza1/n;
-  $body  .= "Pizza 2: ".$Pizza2/n;
-  $body  .= "Pizza 3: ".$Pizza3;
-  
-  //comment needed
-  mail($admin_email, "$subject", $body,$email);
-  
-  //comment needed
-  echo "Thank you for contacting us!";
-  }
-  
-  //comment needed
-  else  {
-          <form method="post">
-          Email: <input name="email" type="text" /><br />
-          Subject: <input name="subject" type="text" /><br />
-          Extra: <input name="extra" type="text" /><br />
-          Message:<br />
-          <textarea name="comment" rows="15" cols="40"></textarea><br />
-          <input type="submit" value="Submit" />
-          </form>
- }
-?>
