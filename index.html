@@ -23,24 +23,33 @@
   <br>
 
   <h2> Our pizza selections come in three categories:</h2>
-  <p>
-    Size; 
-    <li>Small</li>
-    <li>Medium</li>
-    <li>Large</li>
-    <br>
-    Toppins;
-    <li>Pepperoni</li>
-    <li>Mushrooms</li>
-    <li>Bacon</li>
-    <li>Green paper</li>
-    <li>Extra cheese</li>
-    <br>
-    Crust;
-    <li>Thin</li>
-    <li>Thick</li>
-    <li>Double</li>
-  </p>
+  
+  <div class="row">
+    <div class="col-md-4">
+      <p>
+        Size; 
+        <li>Small</li>
+        <li>Medium</li>
+        <li>Large</li>
+    </div>   
+        <br>
+    <div class="col-md-4">
+        Toppins;
+        <li>Pepperoni</li>
+        <li>Mushrooms</li>
+        <li>Bacon</li>
+        <li>Green paper</li>
+        <li>Extra cheese</li>
+    </div>   
+        <br>
+    <div class="col-md-4">
+        Crust;
+        <li>Thin</li>
+        <li>Thick</li>
+        <li>Double</li>
+      </p>
+    </div>
+  </div>  
 
   <h1>Order form</h1>
 <form>
@@ -49,10 +58,10 @@
     <p class="spacing"> Please select the size of pizza and add customise it to your liking </p>
     <p class="spacing"> </p>
     
-  </div>
+  
     <!-- Divider for the products being ordered -->
     <div class="center">
-    <table>
+    
     
     <th>Pizza Size</th>
     <th>Pizza Toppings</th>
@@ -79,33 +88,40 @@
       </tr>
     
       </tr>
-    <th>Pizza Crust</th>
+      <th>Pizza Crust</th>
       <tr>
-        <td class="spacing">
+      <td class="spacing">
        <select name="pizza3" class="sum">
         <option value="0">Please select</option>
         <option value="00.00">Thin Kshs-00.00</option>
         <option value="100.00">Thick Kshs-100.00</option>
         <option value="150.00">Double Kshs-150.00</option>
-        
        </select>
+       </td>
+       </tr>
        <p>The total cost is: Kshs<input id="cost" type="text" disabled/></p>
+      </div>
        <p>For delivery, please avail the following details:</p>
 
     <th>First name</th>
+    <tr>
+    <td class="spacing"><input type="text" name="firstname"></td>
+    </tr>
     <th>Last name</th>
       <tr>
-        <td class="spacing"><input type="text" name="firstname"></td>
+       
         <td class="spacing"><input type="text" name="lastname"></td> 
       </tr>
     <br>
     <!-- Variables collecting the user's first and last names -->
     <th>Phone Number</th>
-    <th>Address</th>
       <tr>
         <td class="spacing"><input type="text" name="phone"></td>
-        <td class="spacing"><input type="text" name="address"></td> 
       </tr>  
+    <th>Address</th>
+      <tr>
+        <td class="spacing"> <input type="text" name="phone"></td>
+      </tr>
 
       
       <a href="Submit.html" class="pure-button pure-button-primary">Submit</a>
