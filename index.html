@@ -51,27 +51,14 @@
 <form>
 
   <div class="center">
-    <p class="spacing"> Please enter your details. Note that you can only order up to 6 pizzas online. </p>
-    <p class="spacing">If you wish to order less than 3 pizzas then leave the space blank. </p>
+    <p class="spacing"> Please select the size of pizza and add customise it to your liking </p>
+    <p class="spacing"> </p>
     
-    </div>
+  </div>
     <!-- Divider for the products being ordered -->
     <div class="center">
     <table>
-    <th>First name</th>
-    <th>Last name</th>
-      <tr>
-        <td class="spacing"><input type="text" name="firstname"></td>
-        <td class="spacing"><input type="text" name="lastname"></td> 
-      </tr>
-    <br>
-    <!-- Variables collecting the user's first and last names -->
-    <th>Phone Number</th>
-    <th>Address</th>
-      <tr>
-        <td class="spacing"><input type="text" name="phone"></td>
-        <td class="spacing"><input type="text" name="address"></td> 
-      </tr>  
+    
     <th>Pizza Size</th>
     <th>Pizza Toppings</th>
       <tr>
@@ -107,7 +94,23 @@
         <option value="150.00">Double Kshs-150.00</option>
         
        </select>
-       <p>The total cost is: $<input id="cost" type="text" disabled/></p>
+       <p>The total cost is: Kshs<input id="cost" type="text" disabled/></p>
+       <p>For delivery, please avail the following details:</p>
+
+       <th>First name</th>
+    <th>Last name</th>
+      <tr>
+        <td class="spacing"><input type="text" name="firstname"></td>
+        <td class="spacing"><input type="text" name="lastname"></td> 
+      </tr>
+    <br>
+    <!-- Variables collecting the user's first and last names -->
+    <th>Phone Number</th>
+    <th>Address</th>
+      <tr>
+        <td class="spacing"><input type="text" name="phone"></td>
+        <td class="spacing"><input type="text" name="address"></td> 
+      </tr>  
       <a href="Submit.html" class="pure-button pure-button-primary">Submit</a>
         </td>
       </tr>
