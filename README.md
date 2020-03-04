@@ -24,6 +24,7 @@ HTML CSS JavaScript and JQuery were used.
 ## Contact Information
 For more information about papa kev's pizza, contact at: 
 othirakevin@gmail.com
+twitter: live:othirakevin
 
 ## Licence
 The MIT licence
