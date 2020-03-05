@@ -1,51 +1,33 @@
-var coll = document.getElementsByClassName("collapsible");
-var i;
-for (i = 0; i< coll.length; i++){
-  coll[i].addEventListener("click" function(){
-    this.classlist.toogle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display == "block"){
-      content.style.display = "none";
-    }
-    else{
-      content.style.display ="block";
-    }
-  });
-}
-
-$(".sum").change(function() { 
-   var total = 0; 
-   $.each($(".sum"), function() { ;
-       total += parseFloat($(this).val()); 
-   });
-   $("#cost").val(total) 
-});
 
 
 
 
-body:{
-	allign: center;
-	}
-  if (isset($_POST['email']))  {
-  
-  //comment needed
-  $admin_email = "1dhawinkels@tawacollege.school.nz";
-  $email = $_POST['email'];
-  $subject = $_POST['Daniel Hawinkels Pizza Hut form'];
-  $comment = $_POST['This is the results'];
-  $body = "First name: ".$Firstname/n;
-  $body  .= "Last name: ".$Lastname/n;
-  $body  .= "Address: ".$Address/n;
-  $body  .= "Phone number: ".$Phonenumber/n;
-  $body  .= "Pizza Size: ".$Pizza1/n;
-  $body  .= "Pizza Toppings: ".$Pizza2/n;
-  $body  .= "Pizza Crust: ".$Pizza3;
-  
-  //comment needed
-  mail($admin_email, "$subject", $body,$email);
-  
-  //comment needed
-  echo "Thank you for contacting us!";
+  function Calculate() {
+    var f1 = document.getElementById("size");
+    var field1 = parseInt(f1.options[f1.selectedIndex].value);
+    var f2 = document.getElementById("toppings");
+    var field2 = parseInt(f2.options[f2.selectedIndex].value);
+    var f3 = document.getElementById("crust");
+    var field3 = parseInt(f3.options[f3.selectedIndex].value);
+    var f4 = document.getElementById("checkout");
+    var field4 = parseInt(f4.options[f4.selectedIndex].value);
+
+    var alertMessage = 'Thanks for the order ' + field1 + ' + ' + field2 + '+' +field3+ '+' +field4+ '. Your total is $' + (field1 * field2 + field3 + field4).toFixed(4);
+    alert(alertMessage);
   }
+
+
+  function Calculate() {
+    var f1 = document.getElementById("productselection");
+    var field1 = parseInt(f1.options[f1.selectedIndex].value);
+    var f2 = document.getElementById("quantityselection");
+    var field2 = parseInt(f2.options[f2.selectedIndex].value);
+    var f3 = document.getElementById("shippingselection");
+    var field3 = parseInt(f3.options[f3.selectedIndex].value);
+    var f4 = document.getElementById("checkout");
+    var field4 = parseInt(f4.options[f4.selectedIndex].value);
   
+    var alertMessage = 'Thanks for the order ' + field1 + ' + ' + field2 + '+'+ field3+ '+' +field4+ '. Your total is Kshs' + (field1 + field2 + field3 +field4).toFixed(2);
+    alert(alertMessage);
+  }
+

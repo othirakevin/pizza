@@ -11,10 +11,10 @@
     
   </style>
 </head>
-<body></body>
-<div class="backdrop">
-    <h1 class="text">PAPA KEV'S PIZZA</h1>  
-</div>   
+<body>
+      <div class="backdrop">
+          <h1 class="text">PAPA KEV'S PIZZA</h1>  
+      </div>   
 
   <p>Welcome to Papa kev's pizza where you customise your Pizza and get it fresh within minutes. <br>
     If you can not make it to any of our convenient outlets, We also have a team of <br> proffecianal riders to ensure you get 
@@ -52,67 +52,65 @@
   </div>  
 
   <h1>Order form</h1>
-<form>
+  <form>
 
   <div class="center">
     <p class="spacing"> Please select the size of pizza and add customise it to your liking </p>
     <p class="spacing"> </p>
+  </div>
     
   
     <!-- Divider for the products being ordered -->
-    <div class="center">
     
     
-    <th>Pizza Size</th>
-    <th>Pizza Toppings</th>
-      <tr>
-        <td class="spacing">
-        <select name="pizza1" class="sum">
-        <option value="0">Please select</option>
-        <option value="500.00">Small Kshs-500.00</option>
-        <option value="800.00">Medium Kshs-800.00</option>
-        <option value="1000.00">Large Kshs-1000.00</option>
+    
+    Pizza Size:
+    <br>
+    <select id="productselection">
+      <option value="0">Please select</option>
+            <option value="500.00">Small Kshs-500.00</option>
+            <option value="800.00">Medium Kshs-800.00</option>
+            <option value="1000.00">Large Kshs-1000.00</option>
+    </select> 
         
-        </select>    
-        </td>
-        <td class="spacing">
-        <select name="pizza2" class="sum">
-        <option value="0">Please select</option>
-        <option value="80.00">Pepperoni Kshs-80.00</option>
-        <option value="50.00">Mushrooms Kshs-50.00</option>
-        <option value="100.00">Bacon Kshs-100.00</option>
-        <option value="30.00">Green papper Kshs-30.00</option>
-        <option value="90.00">Extra cheese</option>
-       </select>  	
-        </td>
-      </tr>
+    Pizza Toppings
     
-      </tr>
-      <th>Pizza Crust</th>
-      <tr>
-      <td class="spacing">
-       <select name="pizza3" class="sum">
-        <option value="0">Please select</option>
-        <option value="00.00">Thin Kshs-00.00</option>
-        <option value="100.00">Thick Kshs-100.00</option>
-        <option value="150.00">Double Kshs-150.00</option>
-       </select>
-       </td>
-       </tr>
-       <br>
-
-       <th>Please select checkout option:</th>
-      <tr>
-      <td class="spacing">
-       <select name="pizza3" class="sum">
+    <select id="quantityselection">
+      <option value="0">Please select</option>
+      <option value="80.00">Pepperoni Kshs-80.00</option>
+      <option value="50.00">Mushrooms Kshs-50.00</option>
+      <option value="100.00">Bacon Kshs-100.00</option>
+      <option value="30.00">Green papper Kshs-30.00</option>
+      <option value="90.00">Extra cheese</option>
+    </select>
+      
+    
+      Pizza Crust:
+    
+      <select id="shippingselection">
         <option value="0">Please select</option>
         <option value="00.00">On counter Kshs-00.00</option>
         <option value="100.00">Within town delivery Kshs-100.00</option>
         <option value="150.00">Out of town delivery Kshs-150.00</option>
+      </select>
+       </td>
+       </tr>
+       <br>
+
+       <br>Please Sellect Checkout options:
+       <br>
+       <select id="checkout">
+         <option value="0">Please select</option>
+         <option value="00.00">On counter Kshs-00.00</option>
+         <option value="100.00">Within town delivery Kshs-100.00</option>
+         <option value="150.00">Out of town delivery Kshs-150.00</option>
        </select>
        </td>
+       <br>
 
-       <button type="button" onClick="Calculate()">See total cost</button>
+       <button type="button" onClick="Calculate()">Show total cost</button>
+       <br>
+
 
        <p>The total cost is: Kshs<input id="cost" type="text" disabled/></p>
       </div>
@@ -147,12 +145,10 @@
     </table>
      <div class="row">
         <a href="contact.html" class="pure-button pure-button-primary">Contact Us</a>
-        <!--
-        links to the Pizza hut site. I will make it so that the user can see their order in the future
-        -->
-        </div>
+        
+     </div>
            
-          </div>
+    </div>
     
   
   <form method="post">
@@ -163,5 +159,9 @@
     <textarea name="comment" rows="15" cols="40"></textarea><br />
     <input type="submit" value="Submit" />
   </form>
+
+<script src="js/script.js"></script>  
+</body>
+</html>
 
  
